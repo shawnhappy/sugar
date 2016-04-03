@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns="http://java.sun.com/xml/ns/javaee" 
+ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+ version="2.5">
+	<display-name>SimpleServlet</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+	<servlet-name>MyFirstServlet</servlet-name>
+	<servlet-class>server.SimpleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>MyFirstServlet</servlet-name>
+	<url-pattern>/index_1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>SugarServlet</servlet-name>
+	<servlet-class>server.SugarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>SugarServlet</servlet-name>
+	<url-pattern>/servlet/sugar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>LeaderboardServlet</servlet-name>
+	<servlet-class>server.GetLeaderBoard</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>LeaderboardServlet</servlet-name>
+	<url-pattern>/leaderboard</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>DownloadServlet</servlet-name>
+	<servlet-class>server.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>DownloadServlet</servlet-name>
+	<url-pattern>/download</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>ChangeParaServlet</servlet-name>
+	<servlet-class>server.ChangePara</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>ChangeParaServlet</servlet-name>
+	<url-pattern>/changepara</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>getinstructionsServlet</servlet-name>
+	<servlet-class>server.getinstructions</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>getinstructionsServlet</servlet-name>
+	<url-pattern>/instruction</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+   <filter-name>EncodingFilter</filter-name>
+   <filter-class>Filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+   <filter-name>EncodingFilter</filter-name>
+   <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
